@@ -1,0 +1,68 @@
+:root{
+    --space-cadet: rgb(31, 32, 65); 
+    --English-violet: rgb(75, 63, 114);
+    --sunglow: rgb(255, 200, 87);
+    --dark-cyan: rgb(17, 157, 164);
+    --paynes-gray: rgb(25, 100, 126);
+    --floral-white: rgb(254, 249, 239);
+    --english-font-popins:'Poppins', sans-serif;
+}
+
+.header-container{
+    background-color: var(--English-violet);
+    min-width: 360px;
+    width: 100vw;
+    height: 150px;
+    border-bottom: solid 2px var(--sunglow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.avatar{
+    width: 80px;
+    margin-right:0.5rem ;
+    display: flex;
+}
+
+.brand-name{
+    width: 200px;
+    
+}
+
+.hamburger-button{
+    width: 40px;
+    margin-left: 25px;
+}
+.question-box{
+    min-width: 360px;
+    height: 200px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.question{
+    font-family: var(--english-font-popins);
+    color: var(--sunglow);
+    font-weight: 700;
+    font-size: 3.5rem;
+    text-align: center;
+}
+.answer-box{
+    min-width: 360px;
+    height: 100px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer{
+    color: var(--floral-white);
+    font-family: var(--english-font-popins);
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 10px;
+}

@@ -66,7 +66,6 @@ select {
     --english-font-popins:'Poppins', sans-serif;
 }
 body{
-    min-width: 360px;
     height: 100vh;
     background-color: var(--space-cadet);
 }
@@ -78,14 +77,15 @@ body{
     align-items: center;
 }
 .logo-container:first-child{
-    width: 450px;
-    margin-top: -60px;
+    width: 350px;
+    margin-top: 0 px;
 }
 .header{
     font-family: var(--english-font-popins);
     color: var(--sunglow);
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 900;
+    margin-top: 50px;
 }
 .ask-lang{
     text-align: center;
@@ -93,15 +93,13 @@ body{
     color: var(--floral-white);
     font-size: 30px;
     font-weight: 500;
-    margin-top: 70px;
+    margin-top: 40px;
 }
-.lang-selection-container a{
-
+.lang-selection-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
-
-
-
-
 
 /*bg*/
 /*txt*/
@@ -132,7 +130,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-  
   }
   
   .buttons button:before, .buttons button:after {
@@ -281,3 +278,40 @@ body{
   .buttons button:focus {
     outline: 0;
   }
+
+
+  /* text animation */
+
+     /* Google chrome */
+    /* Google chrome */
+    @-webkit-keyframes svg-text-anim {
+      40% {
+         stroke-dashoffset: 0;
+         fill: transparent;
+       }
+       60% {
+         stroke-dashoffset: 0;
+         fill: #19647e;
+       }
+       100% {
+         stroke-dashoffset: 0;
+         fill: #19647e;
+       }
+       
+   }
+   /* Most browsers */
+   @keyframes svg-text-anim {
+      40% {
+         stroke-dashoffset: 0;
+         fill: transparent;
+       }
+       60% {
+         stroke-dashoffset: 0;
+         fill: #19647e;
+       }
+       100% {
+         stroke-dashoffset: 0;
+         fill: #19647e;
+       }
+       
+   }
