@@ -7,7 +7,10 @@
     --floral-white: rgb(254, 249, 239);
     --english-font-popins:'Poppins', sans-serif;
 }
-
+body{
+    min-height: 100vh;
+    min-width: 360px;
+}
 .header-container{
     background-color: var(--English-violet);
     min-width: 360px;
@@ -18,6 +21,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding: 10px;
 }
 .avatar{
     width: 80px;
@@ -29,40 +33,83 @@
     width: 200px;
     
 }
-
 .hamburger-button{
     width: 40px;
     margin-left: 25px;
 }
 .question-box{
     min-width: 360px;
-    height: 200px;
+    height: 100px;
     margin: 25px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 10px;
 }
 .question{
     font-family: var(--english-font-popins);
     color: var(--sunglow);
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 2em;
     text-align: center;
+    padding: 15px;
 }
 .answer-box{
     min-width: 360px;
-    height: 100px;
-    margin: 30px auto;
+    max-width: 450px;
+    height: 50px;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.answer{
-    color: var(--floral-white);
+.answer-list{
+    max-width: 450px;
+    min-width: 360px;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.answer-letter{
+    width: 40px;
+    height: 20px;
+    border-bottom: 3px solid var(--floral-white);
+    position: relative;
+    left: -20px;
+    color: red;
+    align-items: center;
     font-family: var(--english-font-popins);
-    font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
     text-align: center;
-    letter-spacing: 10px;
+}
+.guessed{
+    margin: -40px 0 20px;
+    border-color: transparent;
+    
+
+}
+.keyboard-container{
+   max-width: 600px;
+   height: 150px;
+   display: flex;
+   gap: 5px;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin: 150px auto;
+   padding: 0 20px ;
+}
+.key{
+    font-family: var(--english-font-popins);
+    font-weight: 600;
+    width: calc(100% / 9 - 5px);
+    outline: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
 }
