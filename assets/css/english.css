@@ -78,7 +78,7 @@ body{
     border-bottom: 3px solid var(--floral-white);
     position: relative;
     left: -20px;
-    color: red;
+    color: var(--dark-cyan);
     align-items: center;
     font-family: var(--english-font-popins);
     font-size: 2.8rem;
@@ -96,7 +96,7 @@ body{
    max-width: 600px;
    height: 150px;
    display: flex;
-   gap: 5px;
+   gap: 2px 7px;
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
@@ -106,10 +106,18 @@ body{
 .key{
     font-family: var(--english-font-popins);
     font-weight: 600;
-    width: calc(100% / 9 - 5px);
+    width: calc(100% / 9 - 7px);
+    height: 32px;
     outline: none;
     text-transform: uppercase;
     border-radius: 5px;
     font-size: 1rem;
     border: none;
+    background-color: var(--dark-cyan);
+    color: var(--floral-white);
+    
+}
+.key:hover{
+    color: var(--sunglow);
+    background-color:var(--paynes-gray);
 }
