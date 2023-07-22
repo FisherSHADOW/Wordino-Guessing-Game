@@ -53,6 +53,7 @@ body{
     font-size: 2em;
     text-align: center;
     padding: 15px;
+    user-select: none;
 }
 .answer-box{
     min-width: 360px;
@@ -85,12 +86,11 @@ body{
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
+    user-select: none;
 }
 .guessed{
     margin: -40px 0 20px;
     border-color: transparent;
-    
-
 }
 .keyboard-container{
    max-width: 600px;
@@ -115,9 +115,17 @@ body{
     border: none;
     background-color: var(--dark-cyan);
     color: var(--floral-white);
+    box-shadow: 1px 1px  15px rgba(0, 0, 0, 0.521);
+    cursor: pointer;;
     
 }
 .key:hover{
     color: var(--sunglow);
     background-color:var(--paynes-gray);
+}
+.key[disabled]{
+    opacity: 0.8;
+    background-color: var(--English-violet);
+    color: var(--floral-white);
+    pointer-events: none;
 }

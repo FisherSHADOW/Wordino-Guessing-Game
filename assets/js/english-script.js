@@ -1,6 +1,8 @@
 const keyboardDiv = document.querySelector('.keyboard-container')
+const guessesText = document.querySelector('.wrong-guesses')
 const wordDisplay= document.querySelector('.answer-list')
-let currentWord;
+let currentWord, wrongGuesses = 0
+const maxGuesses= 5
 const initGame = (button, clickedLetter) =>{
     //checking if clicked letter is exist on the currentword
     if (currentWord.includes(clickedLetter)) {
@@ -12,8 +14,14 @@ const initGame = (button, clickedLetter) =>{
             }
         })
     }else{
-        console.log(clickedLetter, "is not exist on the word") 
+        wrongGuesses++
     }
+    guessesText.innerText = ''
+    guessesText.innerText = wrongGuesses + '/' +maxGuesses
+    button.disabled=true
+    
+    
+
 }
 //get random questions + answer box 
 const getRandomWord= () =>{
@@ -22,6 +30,7 @@ const getRandomWord= () =>{
     console.log(answer);
     document.querySelector('.question').innerText = question;
     wordDisplay.innerHTML=answer.split("").map(() => '<li class="answer-letter"></li>').join("");
+
 }
 //dynamic keyboard buttons : 
 for (let i = 97; i <= 122; i++) {
@@ -29,6 +38,6 @@ for (let i = 97; i <= 122; i++) {
     button.classList.add('key')
     button.innerText = String.fromCharCode(i)
     keyboardDiv.appendChild(button);
-    button.addEventListener('click',e => initGame(e.target, String.fromCharCode(i)));
+    button.addEventListener('click', e => initGame(e.target, String.fromCharCode(i)));
 }
 getRandomWord();
