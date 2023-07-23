@@ -111,21 +111,24 @@ body{
     outline: none;
     text-transform: uppercase;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     border: none;
     background-color: var(--dark-cyan);
     color: var(--floral-white);
-    box-shadow: 1px 1px  15px rgba(0, 0, 0, 0.521);
+    box-shadow: 1px 1px  15px rgba(0, 0, 0, 0.63);
     cursor: pointer;;
-    
+    transition: all 300ms ease-in-out;
 }
 .key:hover{
     color: var(--sunglow);
     background-color:var(--paynes-gray);
+    box-shadow: none;
+
 }
-.key[disabled]{
+.key-disabled{
     opacity: 0.8;
     background-color: var(--English-violet);
     color: var(--floral-white);
     pointer-events: none;
+    box-shadow: none;
 }
