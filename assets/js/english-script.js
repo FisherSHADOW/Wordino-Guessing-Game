@@ -12,7 +12,7 @@ let highScore = 0;
 
 let popUpWordShow=document.getElementById('correct-word');
 let highScoreShow=document.getElementById('high-score');
-let scoreShow=document.getElementById('score')
+let scoreShow=document.getElementById('score-counter')
 let popUpBtn=document.getElementById('popup-button')
 
 
@@ -52,11 +52,13 @@ const initGame = (button, clickedLetter) => {
     score +=10;   
     if (score > highScore) {
       highScore = score; // Update the high score if the current score is higher
+      scoreShow.innerText=score
     }  
     resetGame();
   } else if (wrongGuesses === maxGuesses) {
     console.log("You lost! The correct word was:", currentWord);
     score=0
+    scoreShow.innerText=score
     highScoreShow.innerText=highScore
     $('.popup-container').fadeIn(500)
     
