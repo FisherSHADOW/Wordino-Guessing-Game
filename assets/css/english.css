@@ -99,7 +99,7 @@ body{
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   margin: 150px auto;
+   margin: 40px auto;
    padding: 0 20px ;
 }
 .key{
@@ -151,7 +151,7 @@ body{
     padding: 10px;
     font-family: var(--english-font-popins);
     text-align: center;
-    
+    margin: 20rem auto;
 }
 .game-over{
     font-weight: 700;
@@ -161,4 +161,12 @@ body{
 .correct-word{
     font-weight: 500;
     font-size: 1.1rem;
+}
+.info-box{
+    background-color: red;
+    max-width: 550px;
+    height: 100px;
+    min-width: 360px;
+    margin:5rem auto;
+    padding: 20px;
 }

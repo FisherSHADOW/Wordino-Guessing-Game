@@ -44,16 +44,35 @@
     <div class="answer-box">
       <ul class="answer-list"></ul>
     </div>
-    <div class="hint-box">
-      <h3 class="wrong-guesses">0/5</h3>
+    <!-- info box  -->
+     <div class="info-box">
+
+      <div class="guess-count">
+      <p class="wrong-guesses">0/5</p>
+      </div>
+
+      <div class="hint-box">
+        get a hint
+      </div>
+      
+      <div class="score-count">
+        
+      </div>
+
+
+
+
     </div>
+
+<!-- dynamic keyboard -->
     <div class="keyboard-container"></div>
+
     <!-- game over popup -->
     <div class="popup-container">
       <div class="popup-box">
         <p class="game-over" >Game Over</p>
         <p class="correct-word">the correct word was: <p id="correct-word"></p></p>
-        <p>score: <span id="score"></span> high score: <span id="high-score"></span></p>
+        <p> Your highest score: <span id="high-score"></span></p>
         <button id="popup-button"> try again</button>
       </div>
     </div>

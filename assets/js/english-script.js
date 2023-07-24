@@ -8,6 +8,13 @@ const maxGuesses = 5;
 let score = 0;
 let highScore = 0;
 
+// popup variables 
+
+let popUpWordShow=document.getElementById('correct-word');
+let highScoreShow=document.getElementById('high-score');
+let scoreShow=document.getElementById('score')
+let popUpBtn=document.getElementById('popup-button')
+
 
 const checkWin = () => {
   const uniqueLetters = [...new Set(currentWord)];
@@ -25,6 +32,7 @@ const initGame = (button, clickedLetter) => {
       if (letter === clickedLetter) {
         correctLetter.push(letter);
         console.log(correctLetter);
+        popUpWordShow.innerText=currentWord;
         wordDisplay.querySelectorAll("li")[index].innerText = letter;
         wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
       }
@@ -41,8 +49,7 @@ const initGame = (button, clickedLetter) => {
 
   const hasWon = checkWin();
   if (hasWon) {
-    score +=10; 
-    console.log("Congratulations! You guessed the word correctly!");  
+    score +=10;   
     if (score > highScore) {
       highScore = score; // Update the high score if the current score is higher
     }  
@@ -50,12 +57,12 @@ const initGame = (button, clickedLetter) => {
   } else if (wrongGuesses === maxGuesses) {
     console.log("You lost! The correct word was:", currentWord);
     score=0
-    resetGame();
+    highScoreShow.innerText=highScore
+    $('.popup-container').fadeIn(500)
+    
     
   }
 };
-
-
 
 const getRandomWord = () => {
   const { answer, question } = questionsList[Math.floor(Math.random() * questionsList.length)];
@@ -86,9 +93,6 @@ for (let i = 97; i <= 122; i++) {
 getRandomWord();
 
 // popup info 
-$('#correct-word').text(currentWord)
-$('#score').text(score)
-$('#high-score').text(highScore)
 $('#popup-button').click(function(){
   $('.popup-container').fadeOut()
   resetGame()
