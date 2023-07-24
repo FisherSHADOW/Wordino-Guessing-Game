@@ -28,10 +28,8 @@ body{
     margin-right:0.5rem ;
     display: flex;
 }
-
 .brand-name{
     width: 200px;
-    
 }
 .hamburger-button{
     width: 40px;
