@@ -2,11 +2,12 @@ const keyboardDiv = document.querySelector('.keyboard-container');
 const guessesText = document.querySelector('.wrong-guesses');
 const wordDisplay = document.querySelector('.answer-list');
 const tryAgainButton = document.querySelector('.try-again');
+
 let currentWord, correctLetter = [], wrongGuesses = 0;
 const maxGuesses = 5;
-
 let score = 0;
-let highestScore = 0
+let highScore = 0;
+
 
 const checkWin = () => {
   const uniqueLetters = [...new Set(currentWord)];
@@ -31,6 +32,8 @@ const initGame = (button, clickedLetter) => {
   } else {
     wrongGuesses++;
   }
+    
+  
 
   guessesText.innerText = '';
   guessesText.innerText = wrongGuesses + '/' + maxGuesses;
@@ -38,17 +41,21 @@ const initGame = (button, clickedLetter) => {
 
   const hasWon = checkWin();
   if (hasWon) {
-    console.log("Congratulations! You guessed the word correctly!");
-    score+=10;
-    score +=highestScore
+    score +=10; 
+    console.log("Congratulations! You guessed the word correctly!");  
+    if (score > highScore) {
+      highScore = score; // Update the high score if the current score is higher
+    }  
     resetGame();
   } else if (wrongGuesses === maxGuesses) {
     console.log("You lost! The correct word was:", currentWord);
     score=0
-    console.log(highestScore)
     resetGame();
+    
   }
 };
+
+
 
 const getRandomWord = () => {
   const { answer, question } = questionsList[Math.floor(Math.random() * questionsList.length)];
@@ -62,9 +69,9 @@ const resetGame = () => {
   wrongGuesses = 0;
   guessesText.innerText = wrongGuesses + '/' + maxGuesses;
   correctLetter = [];
-  console.log(score)
   $('.key').removeClass('key-disabled');
   getRandomWord();
+  
 };
 
 //dynamic keyboard buttons : 
@@ -75,7 +82,14 @@ for (let i = 97; i <= 122; i++) {
   keyboardDiv.appendChild(button);
   button.addEventListener('click', e => initGame(e.target, String.fromCharCode(i)));
 }
-
+// start game 
 getRandomWord();
 
-// reset game with the try again button 
+// popup info 
+$('#correct-word').text(currentWord)
+$('#score').text(score)
+$('#high-score').text(highScore)
+$('#popup-button').click(function(){
+  $('.popup-container').fadeOut()
+  resetGame()
+})

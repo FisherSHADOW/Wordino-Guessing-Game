@@ -42,23 +42,20 @@
       <p class="question"></p>
     </div>
     <div class="answer-box">
-      <ul class="answer-list">
-        <!-- <li class="answer-letter"></li>
-        <li class="answer-letter guessed">a</li>
-        <li class="answer-letter"></li>
-        <li class="answer-letter"></li>
-        <li class="answer-letter"></li>
-        <li class="answer-letter"></li>
-        <li class="answer-letter"></li>
-        <li class="answer-letter"></li> -->
-      </ul>
+      <ul class="answer-list"></ul>
     </div>
     <div class="hint-box">
       <h3 class="wrong-guesses">0/5</h3>
     </div>
     <div class="keyboard-container"></div>
-    <button class="try-again">Try again</button>
-    <p class="score"></p>
-    <p class="high-score"></p>
+    <!-- game over popup -->
+    <div class="popup-container">
+      <div class="popup-box">
+        <p class="game-over" >Game Over</p>
+        <p class="correct-word">the correct word was: <p id="correct-word"></p></p>
+        <p>score: <span id="score"></span> high score: <span id="high-score"></span></p>
+        <button id="popup-button"> try again</button>
+      </div>
+    </div>
   </body>
 </html>
