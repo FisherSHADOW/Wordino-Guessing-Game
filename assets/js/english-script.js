@@ -55,7 +55,6 @@ const initGame = (button, clickedLetter) => {
     }  
     resetGame();
   } else if (wrongGuesses === maxGuesses) {
-    console.log("You lost! The correct word was:", currentWord);
     score=0
     scoreShow.innerText=score
     highScoreShow.innerText=highScore
