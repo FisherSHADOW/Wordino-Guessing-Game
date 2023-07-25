@@ -56,6 +56,28 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: yekan;
+  src: url(../fonts/yekan/yekan-regular.eot);
+  src: url(../fonts/yekan/yekan-regular.ttf);
+  src: url(../fonts/yekan/yekan-regular.woff);
+}
+@font-face {
+font-family: IRANSansX;
+font-style: normal;
+font-weight: 700;
+src: url('../fonts/woff/IRANSansX-Bold.woff') format('woff'),   
+url('../fonts/woff2/IRANSansX-Bold.woff2') format('woff2');	 
+}
+
+@font-face {
+font-family: IRANSansX;
+font-style: normal;
+font-weight: 400;
+src: url('../fonts/woff2/IRANSansX-Regular.woff2') format('woff'),   
+url('../fonts/woff/IRANSansX-Regular.woff') format('woff2');	
+}
+
 :root{
     --space-cadet: rgb(31, 32, 65); 
     --English-violet: rgb(75, 63, 114);
@@ -63,7 +85,9 @@ select {
     --dark-cyan: rgb(17, 157, 164);
     --paynes-gray: rgb(25, 100, 126);
     --floral-white: rgb(254, 249, 239);
+    --smokey--white: rgb(219, 217, 221);
     --english-font-popins:'Poppins', sans-serif;
+    --persian-font-sans: IRANSansX;
 }
 body{
     height: 100vh;
@@ -315,3 +339,4 @@ body{
        }
        
    }
+

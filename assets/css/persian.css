@@ -4,13 +4,84 @@
     src: url(../fonts/yekan/yekan-regular.ttf);
     src: url(../fonts/yekan/yekan-regular.woff);
 }
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/woff/IRANSansX-Bold.woff') format('woff'),   
+	url('../fonts/woff2/IRANSansX-Bold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/woff2/IRANSansX-Regular.woff2') format('woff'),   
+	url('../fonts/woff/IRANSansX-Regular.woff') format('woff2');	
+}
+
+
+:root{
+
+    --persian-font-sans: IRANSansX;
+}
 
 .keyboard-container{
     direction: rtl;
 }
-.key{
+
+.question-box p{
+    font-family: IRANSansX;
+    font-weight: 700;
+}
+
+.answer-box{
+    font-family: IRANSansX;
     direction: rtl;
-    font-family: monospace;
+    text-align: center;
+    min-width: 360px;
+    max-width: 450px;
+    height: 50px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer-letter{
+    left: 20px;
+}
+
+.info-box-col p{
+    font-family: IRANSansX;
+}
+.answer-box{
+    font-family: var(--persian-font-sans);
+}
+.answer-list{
+    font-family: var(--persian-font-sans);
+}
+.answer-letter{
+    font-family: var(--persian-font-sans);
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.key{
+    font-family: var(--persian-font-sans);
+    direction: rtl;
     font-weight: 900;
     text-align: center;
     width: calc(100% / 9 - 7px);
@@ -27,20 +98,35 @@
     text-align: center;
     display: flex;
     justify-content: center;
+    user-select: none;
 
 }
-.answer-box{
-    direction: rtl;
-    text-align: center;
-    min-width: 360px;
-    max-width: 450px;
-    height: 50px;
-    margin: 50px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.key-disabled{
+    opacity: 0.8;
+    background-color: var(--English-violet);
+    color: var(--floral-white);
+    pointer-events: none;
+    box-shadow: none;
 }
-.answer-letter{
-    left: 20px;
+
+.popup-container p{
+    font-family: var(--persian-font-sans) ; 
+}
+.game-over{
+    font-weight: bold;
+    font-size: 3.5rem ;
+    margin-top: -10px;
+
+}   
+#correct-word {
+    font-weight: 700;
+}
+#high-score{
+    font-weight: 700;
     
 }
+
+.buttons button {
+    letter-spacing: 0;
+  }
