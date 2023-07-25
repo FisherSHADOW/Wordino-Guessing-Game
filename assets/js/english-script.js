@@ -2,7 +2,6 @@ const keyboardDiv = document.querySelector('.keyboard-container');
 const guessesText = document.querySelector('.wrong-guesses');
 const wordDisplay = document.querySelector('.answer-list');
 const tryAgainButton = document.querySelector('.try-again');
-
 let currentWord, correctLetter = [], wrongGuesses = 0;
 const maxGuesses = 5;
 let score = 0;

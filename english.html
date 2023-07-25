@@ -55,7 +55,7 @@
         <p class="wrong-guesses">0/5</p>
         </div>
        
-      <div class="hint-box info-box-col">
+      <div id="hint-btn" class="hint-box info-box-col">
         
         <p>get a hint</p>
       </div>
@@ -69,8 +69,18 @@
       <div class="popup-box">
         <p class="game-over" >Game Over</p>
         <p class="correct-word">the correct word was: <p id="correct-word"></p></p>
-        <p class="highest-score" > Your highest score: <span id="high-score"></span></p>
-        <button id="popup-button"> try again</button>
+        <p class="highest-score" > Your highest score: <br> <span id="high-score"></span></p>
+        
+        <div class="buttons">
+          <button id="popup-button" class="btn">
+            <span></span>
+            <p
+              data-start="Try again!"
+              data-text="lets go!"
+              data-title="Try again"
+            ></p>
+          </button>
+        </div>
       </div>
     </div>
   </body>
