@@ -1,0 +1,46 @@
+@font-face {
+    font-family: yekan;
+    src: url(../fonts/yekan/yekan-regular.eot);
+    src: url(../fonts/yekan/yekan-regular.ttf);
+    src: url(../fonts/yekan/yekan-regular.woff);
+}
+
+.keyboard-container{
+    direction: rtl;
+}
+.key{
+    direction: rtl;
+    font-family: monospace;
+    font-weight: 900;
+    text-align: center;
+    width: calc(100% / 9 - 7px);
+    height: 35px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    border: none;
+    background-color: var(--dark-cyan);
+    color: var(--floral-white);
+    box-shadow: 1px 1px  15px rgba(0, 0, 0, 0.63);
+    cursor: pointer;;
+    transition: all 300ms ease-in-out;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+.answer-box{
+    direction: rtl;
+    text-align: center;
+    min-width: 360px;
+    max-width: 450px;
+    height: 50px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer-letter{
+    left: 20px;
+    
+}

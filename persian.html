@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17-t917</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/english.css" />
+    <link rel="stylesheet" href="./assets/css/persian.css" />
     
-</body>
+    <!-- google fonts english -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./assets/js/question-list-persian.js" defer></script>
+    <script src="./assets/js/persian-script.js" defer></script>
+    <script src="./assets/js/jquery.js"></script>
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header-container">
+      <div class="hamburger-button">
+        <img
+          src="./assets/images/hamburger-closed.png"
+          alt="hamburger button to open a side menu"
+        />
+      </div>
+      <div class="brand-name">
+        <img src="./assets/images/logo-no-bg.png" alt=" wordino logo" />
+      </div>
+      <div class="avatar">
+        <img src="./assets/images/avatar1.png" alt="owl avatar" />
+      </div>
+    </header>
+    <!-- end of header  -->
+
+    <!-- question and answer  box  -->
+    <div class="question-box ">
+      <p class="question"></p>
+    </div>
+    <div class="answer-box">
+      <ul class="answer-list"></ul>
+    </div>
+    <!-- info box  -->
+     <div class="info-box">
+       
+       <div class="score-count info-box-col">
+         <p> score: <span id="score-counter"></span></p>
+        </div>
+
+        <div class="guess-count info-box-col">
+        <p class="wrong-guesses">0/5</p>
+        </div>
+       
+      <div id="hint-btn" class="hint-box info-box-col">
+        
+        <p class="test">سلام</p>
+      </div>
+    </div>
+
+<!-- dynamic keyboard -->
+    <div id="p-keyboard" class="keyboard-container"></div>
+
+    <!-- game over popup -->
+    <div class="popup-container">
+      <div class="popup-box">
+        <p class="game-over" >Game Over</p>
+        <p class="correct-word">The correct word was: <p id="correct-word"></p></p>
+        <p class="highest-score" > Your highest score: <br> <span id="high-score"></span></p>
+        
+        <div class="buttons">
+          <button id="popup-button" class="btn">
+            <span></span>
+            <p
+              data-start="Try again!"
+              data-text="lets go!"
+              data-title="Try again"
+            ></p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
