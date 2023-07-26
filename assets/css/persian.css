@@ -26,6 +26,24 @@
     --persian-font-sans: IRANSansX;
 }
 
+/* background animation */
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    font-family: yekan;
+    font-size: 150px;
+    font-weight: 900;
+    color: var(--English-violet);
+    opacity: 0.3;
+    user-select: none;
+    
+}
+
 .keyboard-container{
     direction: rtl;
 }

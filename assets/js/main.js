@@ -16,3 +16,4 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
 setTextAnimation(0.1,7,2,'ease-in','#ffc857',false);
 
 //end of main page text animation 
+
