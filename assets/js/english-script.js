@@ -7,12 +7,14 @@ const maxGuesses = 5;
 let score = 0;
 let highScore = 0;
 
+
 // popup variables 
 
 let popUpWordShow=document.getElementById('correct-word');
 let highScoreShow=document.getElementById('high-score');
 let scoreShow=document.getElementById('score-counter')
 let popUpBtn=document.getElementById('popup-button')
+scoreShow.innerText=score;
 
 
 const checkWin = () => {
@@ -60,7 +62,6 @@ const initGame = (button, clickedLetter) => {
     highScoreShow.innerText=highScore
     $('.popup-container').fadeIn(500)
     
-    
   }
 };
 
@@ -78,7 +79,6 @@ const resetGame = () => {
   correctLetter = [];
   $('.key').removeClass('key-disabled');
   getRandomWord();
-  
 };
 
 //dynamic keyboard buttons : 

@@ -13,6 +13,8 @@ let popUpWordShow=document.getElementById('correct-word');
 let highScoreShow=document.getElementById('high-score');
 let scoreShow=document.getElementById('score-counter')
 let popUpBtn=document.getElementById('popup-button')
+scoreShow.innerText=score;
+
 
 
 const checkWin = () => {
@@ -31,7 +33,6 @@ const initGame = (button, clickedLetter) => {
       if (letter === clickedLetter) {
         correctLetter.push(letter);
         console.log(correctLetter);
-        popUpWordShow.innerText=currentWord;
         wordDisplay.querySelectorAll("li")[index].innerText = letter;
         wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
       }
@@ -56,6 +57,7 @@ const initGame = (button, clickedLetter) => {
     resetGame();
   } else if (wrongGuesses === maxGuesses) {
     score=0
+    popUpWordShow.innerText=currentAnswer;
     scoreShow.innerText=score
     highScoreShow.innerText=highScore
     $('.popup-container').fadeIn(500)
@@ -65,14 +67,18 @@ const initGame = (button, clickedLetter) => {
 };
 
 
+let currentAnswer; // New variable to keep track of the current answer
+
 const getRandomWord = () => {
-    const randomIndex = Math.floor(Math.random() * persianQuestionsList.length);
-    const { question, answer } = persianQuestionsList[randomIndex];
-    currentWord = answer;
-    console.log(answer);
-    document.querySelector('.question').innerText = question;
-    wordDisplay.innerHTML = answer.split("").map(() => '<li class="answer-letter"></li>').join("");
-  };
+  const randomIndex = Math.floor(Math.random() * persianQuestionsList.length);
+  const { question, answer } = persianQuestionsList[randomIndex];
+  currentWord = answer;
+  currentAnswer = answer; // Store the correct answer in the currentAnswer variable
+  console.log(answer);
+  document.querySelector('.question').innerText = question;
+  wordDisplay.innerHTML = answer.split("").map(() => '<li class="answer-letter"></li>').join("");
+};
+
 
 const resetGame = () => {
   wrongGuesses = 0;
