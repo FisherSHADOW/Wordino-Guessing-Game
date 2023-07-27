@@ -15,7 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <script src="./assets/js/jquery.js" ></script>
+    <script src="./assets/js/main.js" defer></script>
   </head>
+
   <body>
     <div class="container">
       <div class="logo-container">
@@ -76,37 +79,51 @@
           </g>
         </svg>
       </div>
-      <article>
-        <h1 class="header">Test your knowledge</h1>
-      </article>
-      <p class="ask-lang">Select your language</p>
-      <div class="lang-selection-container">
-        <a href="/english.html">
-          <div class="buttons">
-            <button class="btn">
-              <span></span>
-              <p
-                data-start="good luck"
-                data-text="good luck!"
-                data-title="English"
-              ></p>
-            </button>
-          </div>
-        </a>
-        <a href="/persian.html">
-          <div class="buttons">
-            <button class="btn">
-              <span></span>
-              <p
-                data-start="P &nbsp e &nbsp r &nbsp s &nbsp i &nbsp a &nbsp n &nbsp!"
-                data-text="have fun!"
-                data-title="Persian"
-              ></p>
-            </button>
-          </div>
-        </a>
+
+      <div class="article-container">
+        <article>
+          <h1 class="header">Test your knowledge</h1>
+        </article>
+        <p class="ask-lang">Select your language</p>
+        <div class="lang-selection-container">
+          <a href="/english.html">
+            <div class="buttons">
+              <button class="btn">
+                <span></span>
+                <p
+                  data-start="good luck"
+                  data-text="good luck!"
+                  data-title="English"
+                ></p>
+              </button>
+            </div>
+          </a>
+          <a href="/persian.html">
+            <div class="buttons">
+              <button class="btn">
+                <span></span>
+                <p
+                  data-start="P &nbsp e &nbsp r &nbsp s &nbsp i &nbsp a &nbsp n &nbsp!"
+                  data-text="have fun!"
+                  data-title="Persian"
+                ></p>
+              </button>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="loader-container">
+      <div style="--size: 64px; --dot-size: 6px; --dot-count: 6; --color: #fff; --speed: 1s; --spread: 60deg;" class="dots">
+        <div style="--i: 0;" class="dot"></div>
+        <div style="--i: 1;" class="dot"></div>
+        <div style="--i: 2;" class="dot"></div>
+        <div style="--i: 3;" class="dot"></div>
+        <div style="--i: 4;" class="dot"></div>
+        <div style="--i: 5;" class="dot"></div>
       </div>
     </div>
-    <script src="./assets/js/main.js"></script>
+    
   </body>
 </html>
