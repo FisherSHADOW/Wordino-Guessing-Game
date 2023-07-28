@@ -26,6 +26,14 @@
     --persian-font-sans: IRANSansX;
 }
 
+.menu-list a{
+    text-decoration: none;
+    color: var(--sunglow);
+    font-family: var(--persian-font-sans);
+    font-size: 25px;
+    font-weight: 700;
+}
+
 /* background animation */
 .circles li{
     position: absolute;
@@ -82,20 +90,6 @@
     font-family: var(--persian-font-sans);
     font-weight: 700;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .key{
     font-family: var(--persian-font-sans);

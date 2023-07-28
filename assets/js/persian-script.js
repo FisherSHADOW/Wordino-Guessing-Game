@@ -114,3 +114,24 @@ $('#popup-button').click(function(){
   $('.popup-container').fadeOut()
   resetGame()
 })
+
+
+
+// burger menu 
+$('.hamburger-button').click(function(){
+  $('.hamburger-menu').css('left','0')
+})
+$('.hamburger-button').click(function(){
+  $('.fade-bg').fadeIn(300)
+})
+
+$('.close-menu').click(function(){
+  $('.hamburger-menu').css('left','-500px')
+})
+$('.close-menu').click(function(){
+  $('.fade-bg').fadeOut(300)
+})
+$('.fade-bg').click(function(){
+  $('.hamburger-menu').css('left','-500px')
+  $('.fade-bg').fadeOut(300)
+})

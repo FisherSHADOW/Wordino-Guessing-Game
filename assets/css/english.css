@@ -36,7 +36,68 @@ body{
 .hamburger-button{
     width: 40px;
     margin-left: 25px;
+    user-select: none;
+    cursor: pointer;
 }
+.fade-bg{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--space-cadet);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    display: none;
+    z-index: 1;
+    
+}
+.hamburger-menu{
+    background-color: var(--paynes-gray);
+    width: 350px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -500px;
+    z-index: 5000;
+    transition: all ease-in-out 600ms;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.616) 
+}
+.close-menu{
+    width: 50px;
+    margin: 50px 30px;
+    user-select: none;
+    cursor: pointer;
+}
+.menu-list a{
+    text-decoration: none;
+    color: var(--sunglow);
+    font-family: var(--english-font-popins);
+    font-size: 25px;
+    font-weight: 700;
+}
+.menu-list ul{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu-list li{
+    list-style: none;
+    text-decoration: none;
+    color: var(--sunglow);
+    transition: all ease-in-out 400ms;
+}
+.menu-list a:hover, li:hover{
+    color: var(--smokey--white);
+    scale: 1.2;
+}
+
+
+
+
+
 .question-box{
     min-width: 360px;
     height: 100px;
@@ -380,3 +441,4 @@ body{
 
 }
 /* background animation end */
+
