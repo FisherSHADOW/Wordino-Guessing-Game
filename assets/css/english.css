@@ -89,11 +89,12 @@ body{
     color: var(--sunglow);
     transition: all ease-in-out 400ms;
 }
-.menu-list a:hover, li:hover{
-    color: var(--smokey--white);
+.menu-list li:hover{
     scale: 1.2;
 }
-
+.menu-list a:hover{
+    color: var(--smokey--white);
+}
 
 
 

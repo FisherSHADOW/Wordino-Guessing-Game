@@ -89,7 +89,7 @@ const resetGame = () => {
   // Delay the execution of getRandomWord() by 1 seconds
   setTimeout(() => {
     getRandomWord();
-  }, 1000);
+  }, 500);
 };
 
 //dynamic keyboard buttons : 
