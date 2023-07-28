@@ -85,8 +85,11 @@ const resetGame = () => {
   guessesText.innerText = wrongGuesses + '/' + maxGuesses;
   correctLetter = [];
   $('.key').removeClass('key-disabled');
-  getRandomWord();
-  
+
+  // Delay the execution of getRandomWord() by 1 seconds
+  setTimeout(() => {
+    getRandomWord();
+  }, 1000);
 };
 
 //dynamic keyboard buttons : 
