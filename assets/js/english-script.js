@@ -3,6 +3,7 @@ const guessesText = document.querySelector('.wrong-guesses');
 const wordDisplay = document.querySelector('.answer-list');
 const tryAgainButton = document.querySelector('.try-again');
 let currentWord, correctLetter = [], wrongGuesses = 0;
+let profileHighScore=document.getElementById('gi-high-score')
 const maxGuesses = 5;
 let score = 0;
 let highScore = 0;
@@ -15,6 +16,11 @@ let highScoreShow=document.getElementById('high-score');
 let scoreShow=document.getElementById('score-counter')
 let popUpBtn=document.getElementById('popup-button')
 scoreShow.innerText=score;
+
+const updateProfileHighScore = () => { 
+  //this function will update the highest score in profile info, (the high score in popUp will reset but the high score in profile info will remain till the page reloaded)
+  profileHighScore.innerText = highScore;
+};
 
 
 const checkWin = () => {
@@ -52,8 +58,9 @@ const initGame = (button, clickedLetter) => {
   if (hasWon) {
     score +=10;   
     if (score > highScore) {
-      highScore = score; // Update the high score if the current score is higher
+      highScore = score; // Update the high score if the current score is higher 
       scoreShow.innerText=score
+      updateProfileHighScore();
     }  
     resetGame();
   } else if (wrongGuesses === maxGuesses) {
@@ -72,7 +79,6 @@ const getRandomWord = () => {
   document.querySelector('.question').innerText = question;
   wordDisplay.innerHTML = answer.split("").map(() => '<li class="answer-letter"></li>').join("");
 };
-
 const resetGame = () => {
   wrongGuesses = 0;
   guessesText.innerText = wrongGuesses + '/' + maxGuesses;
@@ -102,7 +108,6 @@ $('#popup-button').click(function(){
   resetGame()
 })
 
-
 // burger menu 
 $('.hamburger-button').click(function(){
   $('.hamburger-menu').css('left','0')
@@ -120,4 +125,11 @@ $('.close-menu').click(function(){
 $('.fade-bg').click(function(){
   $('.hamburger-menu').css('left','-500px')
   $('.fade-bg').fadeOut(300)
+})
+
+
+// gamer profile show on click 
+
+$('.avatar').click(function(){
+  $('.gamer-info').css('right','0')
 })

@@ -11,27 +11,68 @@
 body{
     min-height: 100vh;
     min-width: 360px;
-   
 }
 .header-container{
     background-color: var(--English-violet);
     min-width: 360px;
     width: 100vw;
-    height: 150px;
+    height: 200px;
     border-bottom: solid 2px var(--sunglow);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     padding: 10px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.623);
+    z-index: 5;
 }
 .avatar{
     width: 80px;
     margin-right:0.5rem ;
     display: flex;
+    cursor: pointer;
+}
+
+.avatar-img{
+    width: 80px;
+    height: 80px;
 }
 .brand-name{
-    width: 200px;
+    width: 300px;
+}
+.gamer-info{
+    background-color: var(--smokey--white);
+    width: 350px;
+    height: 200px;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    border-radius: 15px 0 0 15px;
+    display: block;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    transition: all ease-in-out 500ms;
+}
+.gamer-info p{
+    font-family: var(--english-font-popins);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--space-cadet);
+}
+.gamer-info span{
+    font-family: var(--english-font-popins);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--paynes-gray);
+}
+.gamer-info img{
+    width: 100px;
+    height: 100px
 }
 .hamburger-button{
     width: 40px;
@@ -95,9 +136,6 @@ body{
 .menu-list a:hover{
     color: var(--smokey--white);
 }
-
-
-
 
 .question-box{
     min-width: 360px;
