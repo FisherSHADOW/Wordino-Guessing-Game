@@ -142,3 +142,17 @@
 .buttons button {
     letter-spacing: 0;
   }
+
+  .gamer-info p{
+    font-family: var(--persian-font-sans);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--space-cadet);
+}
+.gi-id{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--paynes-gray);
+}
