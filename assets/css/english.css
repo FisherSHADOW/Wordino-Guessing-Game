@@ -74,6 +74,26 @@ body{
     width: 100px;
     height: 100px
 }
+.close-btn{
+    width: 20px;
+    height: 200px;
+    position: absolute;
+    left: 10px;
+    border-radius: 15px 0 0 15px;
+    font-size: 40px;
+    color: var(--English-violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.close-btn i{
+    cursor: pointer;;
+}
+
+.close-btn i:hover{
+    color: var(--dark-cyan);
+}
 .hamburger-button{
     width: 40px;
     margin-left: 25px;
@@ -90,7 +110,6 @@ body{
     opacity: 0.6;
     display: none;
     z-index: 1;
-    
 }
 .hamburger-menu{
     background-color: var(--paynes-gray);

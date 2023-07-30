@@ -133,3 +133,6 @@ $('.fade-bg').click(function(){
 $('.avatar').click(function(){
   $('.gamer-info').css('right','0')
 })
+$('#close-icon').click(function(){
+  $('.gamer-info').css('right','-400px')
+})

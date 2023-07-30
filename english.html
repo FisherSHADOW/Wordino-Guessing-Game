@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- js files -->
     <script src="./assets/js/question-list.js" defer></script>
     <script src="./assets/js/english-script.js" defer></script>
     <script src="./assets/js/jquery.js"></script>
@@ -23,16 +28,17 @@
     <!-- background animation start -->
     <div class="area" >
       <ul class="circles">
-        <li>W</li>
-                  <li>O</li>
-                  <li>R</li>
-                  <li>D</li>
-                  <li>I</li>
-                  <li>N</li>
-                  <li>O</li>
-                  <li>?</li>
-                  <li>?</li>
-                </ul>
+          <li>W</li>
+          <li>O</li>
+          <li>R</li>
+          <li>?</li>
+          <li>D</li>
+          <li>I</li>
+          <li>N</li>
+          <li>O</li>
+          <li>?</li>
+          <li>D</li>
+        </ul>
     </div >
     <!-- background animation end -->
     <!-- header  -->
@@ -52,7 +58,10 @@
       <div class="gamer-info">
         <img class="avatar-img" src="./assets/images/avatar1.png" alt="owl avatar" />
         <p class="gi-id">ID: <span>Tommy#2154</span></p>
-        <p class="gi-high-score">Highest score: <span id="gi-high-score"></span></p>
+        <p class="gi-high-score">Highest score: <span id="gi-high-score">0</span></p>
+        <div class="close-btn">
+          <i id="close-icon" class="fa-solid fa-caret-right"></i>
+        </div>
       </div>
     </header>
     <!-- end of header  -->
