@@ -1,6 +1,6 @@
 :root{
-    --space-cadet: rgb(31, 32, 65); 
-    --English-violet: rgb(75, 63, 114);
+    --space-cadet: #1f2141; 
+    --English-violet: #4b3f72;
     --sunglow: rgb(255, 200, 87);
     --dark-cyan: rgb(17, 157, 164);
     --paynes-gray: rgb(25, 100, 126);
@@ -13,7 +13,8 @@ body{
     min-width: 360px;
 }
 .header-container{
-    background-color: var(--English-violet);
+    background: rgb(61,53,88);
+    background: linear-gradient(18deg, rgba(61,53,88,1) 0%, rgba(75,63,114,1) 100%);
     min-width: 360px;
     width: 100vw;
     height: 200px;
@@ -29,7 +30,7 @@ body{
 }
 .avatar{
     width: 80px;
-    margin-right:0.5rem ;
+    height: 80px;
     display: flex;
     cursor: pointer;
 }
@@ -39,7 +40,7 @@ body{
 
 .avatar-img{
     width: 80px;
-    height: 80px;
+    height: fit-content;
 }
 .brand-name{
     width: 300px;
@@ -382,14 +383,11 @@ body{
     top:50vh;
     
 }
-
 .context h1{
     text-align: center;
     color: #fff;
     font-size: 50px;
 }
-
-
 .area{
     background: rgb(31, 32, 65); 
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
@@ -397,8 +395,6 @@ body{
     height:100vh;
     position: fixed;
     z-index: -1;
-    
-   
 }
 
 .circles{
@@ -410,7 +406,6 @@ body{
     overflow: hidden;
     
 }
-
 .circles li{
     position: absolute;
     display: block;
@@ -426,9 +421,6 @@ body{
     opacity: 0.4;
     user-select: none;
     transition: all ease-in-out;
-    
-
-    
 }
 
 .circles li:nth-child(1){

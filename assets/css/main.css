@@ -92,6 +92,7 @@ url('../fonts/woff/IRANSansX-Regular.woff') format('woff2');
 body{
     height: 100vh;
     background-color: var(--space-cadet);
+    min-width: 360px;
 }
 .container{
     height: 100vh;
@@ -107,13 +108,21 @@ body{
 .header{
     font-family: var(--english-font-popins);
     color: var(--sunglow);
-    font-size: 45px;
+    font-size: 38px;
     font-weight: 900;
     margin-top: 50px;
 }
+
 .article-container{
   display: none;
   user-select: none;
+  text-align: center;
+}
+.animation-container{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 0 15px;
 }
 .ask-lang{
     text-align: center;
