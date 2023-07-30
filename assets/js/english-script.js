@@ -46,9 +46,7 @@ const initGame = (button, clickedLetter) => {
   } else {
     wrongGuesses++;
   }
-    
   
-
   guessesText.innerText = '';
   guessesText.innerText = wrongGuesses + '/' + maxGuesses;
   button.classList.add('key-disabled');
@@ -124,7 +122,6 @@ $('.fade-bg').click(function(){
   $('.hamburger-menu').css('left','-500px')
   $('.fade-bg').fadeOut(300)
 })
-
 
 // gamer profile show on click 
 
