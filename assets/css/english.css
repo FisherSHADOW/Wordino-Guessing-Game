@@ -25,12 +25,16 @@ body{
     padding: 10px;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.623);
     z-index: 5;
+    user-select: none;
 }
 .avatar{
     width: 80px;
     margin-right:0.5rem ;
     display: flex;
     cursor: pointer;
+}
+.avatar:hover{
+    scale: 1.1;
 }
 
 .avatar-img{
@@ -55,6 +59,7 @@ body{
     justify-content: start;
     align-items: center;
     transition: all ease-in-out 500ms;
+    user-select: none;
 }
 .gamer-info p{
     font-family: var(--english-font-popins);
@@ -99,6 +104,12 @@ body{
     margin-left: 25px;
     user-select: none;
     cursor: pointer;
+    font-size: 40px;
+    color: var(--smokey--white);
+    transition: all 300ms ease-in-out;
+}
+.hamburger-button:hover{
+    color: var(--sunglow);
 }
 .fade-bg{
     width: 100vw;
@@ -120,7 +131,20 @@ body{
     left: -500px;
     z-index: 5000;
     transition: all ease-in-out 600ms;
-    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.616) 
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.616);
+    user-select: none;
+}
+.fa-xmark{
+
+    color: var(--smokey--white);
+    cursor: pointer;
+    margin: 75px 32px;
+    font-size: 50px;
+    transition: all 300ms ease-out;
+}
+.fa-xmark:hover{
+
+   color: var(--sunglow);
 }
 .close-menu{
     width: 50px;

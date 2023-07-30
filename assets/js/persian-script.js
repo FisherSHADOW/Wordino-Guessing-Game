@@ -125,10 +125,10 @@ $('.hamburger-button').click(function(){
   $('.fade-bg').fadeIn(300)
 })
 
-$('.close-menu').click(function(){
+$('.fa-xmark').click(function(){
   $('.hamburger-menu').css('left','-500px')
 })
-$('.close-menu').click(function(){
+$('.fa-xmark').click(function(){
   $('.fade-bg').fadeOut(300)
 })
 $('.fade-bg').click(function(){
