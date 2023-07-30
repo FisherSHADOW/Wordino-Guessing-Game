@@ -38,7 +38,6 @@ const initGame = (button, clickedLetter) => {
     [...currentWord].forEach((letter, index) => {
       if (letter === clickedLetter) {
         correctLetter.push(letter);
-        console.log(correctLetter);
         popUpWordShow.innerText=currentWord;
         wordDisplay.querySelectorAll("li")[index].innerText = letter;
         wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
@@ -75,7 +74,6 @@ const initGame = (button, clickedLetter) => {
 const getRandomWord = () => {
   const { answer, question } = questionsList[Math.floor(Math.random() * questionsList.length)];
   currentWord = answer;
-  console.log(answer);
   document.querySelector('.question').innerText = question;
   wordDisplay.innerHTML = answer.split("").map(() => '<li class="answer-letter"></li>').join("");
 };

@@ -39,7 +39,6 @@ const initGame = (button, clickedLetter) => {
     [...currentWord].forEach((letter, index) => {
       if (letter === clickedLetter) {
         correctLetter.push(letter);
-        console.log(correctLetter);
         wordDisplay.querySelectorAll("li")[index].innerText = letter;
         wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
       }
@@ -82,7 +81,6 @@ const getRandomWord = () => {
   const { question, answer } = persianQuestionsList[randomIndex];
   currentWord = answer;
   currentAnswer = answer; // Store the correct answer in the currentAnswer variable
-  console.log(answer);
   document.querySelector('.question').innerText = question;
   wordDisplay.innerHTML = answer.split("").map(() => '<li class="answer-letter"></li>').join("");
 };
